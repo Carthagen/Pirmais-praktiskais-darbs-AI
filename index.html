@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dots - AI</title>
+
+    <!-- Download additional libraries to handle js and graphics -->
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="zingchart.min.js"></script>
+    <script src="zingchart-tree.min.js"></script>
+
+    <script type="text/javascript">
+        var _username = "Human";
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/javascript" src="chart.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="game_view.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="actuator.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="gameInner">
+            <div id="gameHeader">
+                <div class="twoPlayers">
+                    <div class="onePlayer floatL">
+                        <div>
+                            <span class="onePlayer__username active-username">Human</span>
+                            <div class="onePlayer__captureDots">
+                                <div class="color_square color_square__red"></div>
+                                <div style="display: inline-block;vertical-align: top;"><span>Grabbed: </span><span class="count">0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="onePlayer floatR">
+                        <div>
+                            <span class="onePlayer__username">Compter</span>
+                            <span class="onePlayer__rank"></span>
+                            <div class="onePlayer__captureDots">
+                                <div class="color_square color_square__blue"></div>
+                                <div style="display: inline-block;vertical-align: top;"><span>Grabbed: </span><span class="count">0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="content" style="width: 600px; height: 600px;">
+                <canvas id="gameSurface" width="600" height="600" style="cursor: auto;"></canvas>
+            </div>
+        </div>
+        <div class="chartInner">
+            <div id="chart" class="chart-container"></div>
+        </div>
+    </div>
+</body>
+</html>

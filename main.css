@@ -1,0 +1,242 @@
+html, body{
+    margin:0;
+}
+
+body {
+    font-family: Verdana,Geneva,sans-serif;
+}
+
+.main {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.gameInner {
+	display: flex;
+	flex-direction: column;
+}
+
+.chartInner {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.chart-container {
+	height: 600px !important;
+	width: 600px !important;
+}
+
+.zc-ref {
+	display: none;
+}
+
+select {
+	margin: 10px;
+}
+
+.column_2, .gameSquare {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.gameSquare {
+
+    background-color: white;
+}
+
+#content {
+    width: 600px;
+    position: relative;
+}
+
+#gameHeader .twoPlayers {
+	overflow: hidden;
+	position: relative;
+}
+
+#gameHeader .onePlayer {
+	width: 250px;
+	overflow: hidden;
+	margin-top: 5px;
+	font: 1em/1.25 "PT Sans",sans-serif;
+	position: relative;
+}
+
+.onePlayer__username:not(.active-username) {
+    cursor: default!important;
+}
+
+.active-username {
+    cursor: pointer;
+}
+
+#gameHeader .onePlayer .onePlayer__captureDots {
+	font-size: 14px;
+	color: gray;
+	margin-top: 5px;
+}
+#gameHeader .onePlayer .onePlayer__captureDots .count {
+	font-weight: bold;
+	color: #444;
+}
+
+
+#gameHeader .onePlayer .onePlayer__rank {
+	color: #AAA;
+	margin-left: 2px;
+	font-size: 80%;
+}
+
+.onePlayer__timer {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    font-family: Linear,"Helvetica Neue",Arial;
+    display: block;
+    display: none;
+}
+
+#gameHeader .onePlayer .onePlayer__timer.red_timer {
+	color: rgb(239, 65, 53)
+}
+
+
+.onePlayer.floatL .onePlayer__timer{
+	left: 3px;
+}
+
+.onePlayer.floatR .onePlayer__timer{
+	right: 3px;
+}
+
+#gameHeader .gameInfo {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#gameHeader .gameInfo .score {
+	padding-top: 7px;
+    cursor: default;
+}
+
+.color_square {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 6px;
+}
+
+.color_square.color_square__red {
+	background-color: red;
+}
+
+.color_square.color_square__blue {
+	background-color: blue;
+}
+
+.floatL {
+	float: left !important;
+}
+
+.floatR {
+	float: right !important;
+}
+
+#gameHeader .onePlayer.floatR {
+	text-align: center;
+}
+
+#gameHeader .onePlayer.floatL {
+	text-align: center;
+}
+
+#gameHeader .status {
+	position: absolute;
+	width: 100%;
+    padding-top: 2px;
+}
+
+#gameHeader .status .status_text {
+    font-size: 14px;
+    cursor: default;
+    background-color: white;
+}
+
+#gameHeader .status .status_yourMove {
+	color:green;
+}
+
+#gameHeader .status .status_rivalMove {
+	color:#C42E21;
+}
+
+.fullScreen {
+    position: absolute;
+    left: 105px;
+    font-size: 10px;
+    top: 5px;
+    cursor: pointer;
+    color: green;
+    text-decoration: underline;
+}
+
+.none {
+	display: none;
+}
+
+.modalDialog {
+	z-index: 4;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#gameSurface {
+	cursor: auto;
+	top: 0;
+	left: 0;
+	z-index:0;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+#title {
+	font-size: 40px;
+	color: blue;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.hor-coords {
+	margin-top: -9px;
+	width: 101%;
+}
+
+.hor-coords .cell {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: #707070;
+	font-size: 10px;
+}
+
+.vert-coords {
+	position: absolute;
+	top: 7px;
+	right: -22px;
+}
+
+.vert-coords .cell {
+	text-align: center;
+	color: #707070;
+	font-size: 10px;
+	height: 30px;
+}
